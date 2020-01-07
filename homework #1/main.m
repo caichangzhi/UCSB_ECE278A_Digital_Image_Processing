@@ -1,7 +1,6 @@
 % Course: ECE 278A Digital Image Processing
 % Homework #1
 % Author: Changzhi Cai
-% Perm Number: 9911579
 % Submitted Date: 10/06/2019
 % Input: A binary image, which is a matrix consisting of either 0s or 1s
 % Output: Corresponding distance transform using the manhattan distance
