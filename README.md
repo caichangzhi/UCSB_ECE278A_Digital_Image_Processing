@@ -29,14 +29,14 @@ Homework #2: Image Pyramids
 Write MATLAB code to implement Gaussian and Laplacian pyramids similar to the SIFT feature computations
 that we will discuss in class soon. You can only use standard MATLAB function calls (e.g., Gaussian smoothing,
 convolution, etc). I will go over this problem in detail during the lecture.
-Your code should compute four levels in the pyramid, at resolutions 512x512 (original), 256x256, 128x128, and
+- Your code should compute four levels in the pyramid, at resolutions 512x512 (original), 256x256, 128x128, and
 64x64. Your report should include these pictures at the corresponding resolutions. Include your MATLAB
 code print-out in your report also as text. Your submitted code should be self-contained, should take the image
 file name as input, together with Gaussian standard deviation as a parameter. For the Gaussian pyramid, it
-should construct the 4 levels as above. For example,
-[I512, I256, I128, I64] = GaussianPyramid (I, stdDeviation)
-Using the above Gaussian pyramid, you can also construct the corresponding Laplacian pyramid. Construct
+should construct the 4 levels as above. 
+- For example,[I512, I256, I128, I64] = GaussianPyramid (I, stdDeviation)
+- Using the above Gaussian pyramid, you can also construct the corresponding Laplacian pyramid. Construct
 the Laplacian pyramid at the four resolutions as noted above. For example, to construct the Laplacian pyramid
 at resolution 512x512, you take the Gaussian smoothed image at resolution 512x512, and subtract it from the
 original 512x512 image. Include the images and code in your report similar to Gaussian pyramid.
-Take any gray-scale 512x512 pixel image of your choice to construct the Gaussian and Laplacian pyramids.
+- Take any gray-scale 512x512 pixel image of your choice to construct the Gaussian and Laplacian pyramids.
