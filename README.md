@@ -65,3 +65,24 @@ above KLT case. Your report should include 2 tables, one for SET1 and the other 
 the columns correspond to the three different transforms, and the rows correspond to the number of
 coefficients used in the reconstruction, and the table entries should be the RMS error in reconstructing
 the signal.
+
+Homework #4: JPEG implementation
+-------------
+Your code should take the following as input parameters: (a) image file name; (b) number of coefficients
+retained, a number between 1-64; and the output should include (a) the RMSE, (b) image reconstructed from
+the retained coefficients.
+Your code will read the input image, subtract 128 from each pixel value, partition the image into blocks of 8x8
+pixels (zero padding if needed to fill up the boundary blocks), compute the DCT of each 8x8 block, thresholdcode the DCT coefficients to retain only the number of coefficients N as specified and zero out the remaining
+coefficients, and then reconstruct the 8x8 blocks and put the reconstructed picture together.
+- compute the RMSE for the reconstructed picture for 4, 16, 32, 64 retained coefficients for one of the Nikon
+images you had from the previous assignment.
+- show the results (pictures) for the reconstructed Nikon image in (a).
+- include these in your PDF report, and submit online a ZIP file containing the MATLAB code and your PDF
+report.
+- (100% EXTRA CREDIT) Huffman code the coefficients (including zig-zag scanning, creating the run-level
+pairs, and huffman coding these pairs) as we discussed in class, and construct your version of a JPEG image
+with extension .myJPEG. You should also have a read function for this file extension. Compare and contrast
+with the standard JPEG compression. The *.myJPEG image should be self-contained and should have all the
+data embedded in it for reconstruction (including the huffman table as needed). For this part of the assignment,
+you may use the standard (default) JPEG quantization matrix and you may assume that this is not part of
+the JPEG image.
