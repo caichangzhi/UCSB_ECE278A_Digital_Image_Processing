@@ -40,3 +40,28 @@ the Laplacian pyramid at the four resolutions as noted above. For example, to co
 at resolution 512x512, you take the Gaussian smoothed image at resolution 512x512, and subtract it from the
 original 512x512 image. Include the images and code in your report similar to Gaussian pyramid.
 - Take any gray-scale 512x512 pixel image of your choice to construct the Gaussian and Laplacian pyramids.
+
+Homework #3: K-L Transform
+-------------
+You will be provided 2 sets of 20 images each in the raw format (SET1 and SET2). You will compute
+the KLT basis images using SET1 images only, buty you will provide the results (RMSE vs Number
+of Coefficients kept graphs) for both SET1 and SET2.
+- Implement each step of the Karhunen-Loeve Transform using SET1. You may follow the code found
+here (but you can use any other resource or write your own code, it should be few lines in MATLAB):
+http://www.mathworks.com/matlabcentral/fileexchange/6995-karhunen-loeve-decompositionfor-statistical-recognition-and-detection
+but please make sure you understand each step clearly.
+- Reconstruct each of the images in SET1 and SET2 using all of the KLT basis computed as in the
+above step. Then reconstruct the image back keeping only (i) 100, (ii) 20, (iii) 10, and (iv) 5 top KLT
+coefficients. For each of these cases, include in your report an example of the reconstructed image and
+the root mean-squared error for the entire collection. Also include the code you used in generating the
+reconstructed images from the specified number of coefficients, and adequately comment your code so
+as to explain clearly the steps required to arrive at the reconstructed images.
+- Repeat the above step,replacing the KLT with the standard 2D DFT and 2D DCT. Here you use the
+magnitiude of the coefficients to pick the top M number of coefficients as specified. As we discussed
+in class, for the DFT case, make sure that you pay attention to conjugate symmetry property of the
+Fourier transform coefficients. For example, the top 100 coefficients for Fourier transform will include
+approximately 50 complex coefficients. Give reconstruction examples for the same image used for the
+above KLT case. Your report should include 2 tables, one for SET1 and the other for SET2, where
+the columns correspond to the three different transforms, and the rows correspond to the number of
+coefficients used in the reconstruction, and the table entries should be the RMS error in reconstructing
+the signal.
